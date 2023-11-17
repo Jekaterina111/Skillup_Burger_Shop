@@ -1,27 +1,23 @@
 @import "colors";
 
 footer {
-  min-height: 300px;
+  min-height: 10rem;
   background-color: $dark;
-  padding: 4rem;
+  padding-left: 8rem;
+  padding-top: 2rem;
   display: grid;
   grid-template-columns: 2fr 1fr;
   color: white;
   align-items: center;
 
-  h2 {
-    color: $red;
-    font-family: fantasy;
-    font-weight: 400;
-    font-size: 2rem;
-  }
+h2 {
+  color: $red;
+  font-family: fantasy;
+  font-weight: 400;
+  font-size: 2rem;
+}
 
-  p,
-  strong {
-    margin: 1rem;
-  }
-
-  aside {
+aside {
     height: 100%;
     display: flex;
     flex-direction: column;

@@ -16,13 +16,13 @@ function DropdownMenu() {
 
   return (
     <div>
-      <nav className="navbar navbar-expand-lg navbar-dark bg-primary">
         <div className="container">
-          <a className="navbar-brand" href="#">
+          <a className="navbar-brand" href="/#">
           
           </a>
           <div class="btn-group">
             <button
+              id="primary"
               type="button"
               class="btn btn-primary dropdown-toggle"
               data-bs-toggle="dropdown"
@@ -44,7 +44,6 @@ function DropdownMenu() {
             </ul>
           </div>
         </div>
-      </nav>
     </div>
   );
 }

@@ -34,10 +34,7 @@
 
 .cartItem {
   background-color: rgb(246, 246, 246);
-  margin: 1rem;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
+  text-align: center;
   padding: 1rem;
   border-radius: 5px;
 
@@ -51,7 +48,9 @@
     }
 
     > img {
-      height: 50px;
+      height: 15rem;
+      object-fit: cover;
+      width: 15rem;
     }
 
     > input {

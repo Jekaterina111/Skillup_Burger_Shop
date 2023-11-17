@@ -1,8 +1,14 @@
 @import "colors";
 
+.icon-container {
+  color: $reddark;
+  width: 5rem;
+}
+
 nav {
   height: 5rem;
-  padding: 2rem;
+  padding-left: 8rem;
+  padding-right: 5rem;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -13,11 +19,6 @@ nav {
     display: flex;
     align-items: center;
 
-    > svg {
-      color: $red;
-      font-size: 3rem;
-    }
-
     > a {
       margin: 0 2rem;
       color: $dark;
@@ -25,15 +26,6 @@ nav {
 
       &:hover {
         color: $lightdark;
-      }
-
-      > svg {
-        color: $red;
-        transition: inherit;
-        font-size: 1.5rem;
-        &:hover {
-          color: $lightdark;
-        }
       }
     }
   }

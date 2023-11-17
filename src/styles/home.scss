@@ -3,8 +3,10 @@
 .home {
   height: 100vh;
   overflow-x: hidden;
-
+ 
   div {
+    display: flex;
+    flex-direction: column;
     padding-left: 8rem;
     padding-top: 15rem;
     > h1 {
@@ -15,11 +17,9 @@
     > p {
       font-size: 1.2rem;
     }
-  }
 
   > a {
     display: block;
-    margin: 2rem 8rem;
     width: 10rem;
     background-color: $red;
     color: white;
@@ -33,30 +33,37 @@
       background-color: $reddark;
     }
   }
+}
 
   &::before {
     content: "";
     width: 100%;
     height: 100%;
     background-image: url("../assets/bg.jpg");
-    background-repeat: no-repeat;
     background-size: cover;
+    object-fit: cover;
     position: absolute;
+    padding: 1rem;
     left: 0%;
     z-index: -1;
   }
 }
 
+  
+
 @media screen and (max-width: 600px) {
   .home {
     > div {
-      text-align: center;
-      padding-top: 10rem;
-      padding-left: 0rem;
-    }
-
-    > a {
-      margin: 2rem auto;
-    }
+      display: flex;
+      flex-direction: column;
+      padding: 1rem;
+      > h1 {
+        font-size: 2rem;
+        text-transform: uppercase;
+        > a {
+          width: 6rem;
+        }
+      }
+    } 
   }
-}
+} 
