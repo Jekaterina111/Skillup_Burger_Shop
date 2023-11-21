@@ -41,6 +41,7 @@ aside {
 @media screen and (max-width: 600px) {
   footer {
     grid-template-columns: 1fr;
+    padding:3rem;
     text-align: center;
   }
 }

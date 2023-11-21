@@ -14,8 +14,6 @@ import Profile from './components/profile/Profile';
 
 import OrderDetails from './components/myOrders/OrderDetails';
 import About from './components/about/About';
-
-
 import './styles/app.scss';
 import './styles/header.scss';
 import './styles/home.scss';
@@ -31,10 +29,10 @@ import './styles/table.scss';
 import './styles/orderDetails.scss';
 import './styles/about.scss';
 
-function App() {
+const App = () => {
   return (
     <Router>
-      <Header isAuthenticated={true} />
+      <Header isAuthenticated="true" />
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/contact" element={<Contact />} />

@@ -2,7 +2,9 @@
 
 .icon-container {
   color: $reddark;
-  width: 5rem;
+  font-size: 2rem;
+  display: flex;
+  align-items: center;
 }
 
 nav {

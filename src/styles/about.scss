@@ -3,30 +3,39 @@
 .about {
   width: 100%;
   background-color: $pink;
+  margin: 0;
+  padding: 0;
 
   > main {
     background-color: white;
-    max-width: 900px;
+    width: 100%;
     height: 100%;
-    margin: auto;
-
-    > h1 {
-      font: 500 3rem "Roboto";
-      color: $red;
-      padding: 1rem 2rem;
-      text-transform: uppercase;
+    > .about-container {
       background-color: $dark;
-    }
-
-    > article {
-      margin: 2rem 0;
-      > h4 {
-        font: 100 2rem "Roboto";
+     > h1 {
+        font: 500 3rem "Roboto";
+        color: $red;
+        padding: 1rem 2rem;
         text-transform: uppercase;
-        text-align: center;
-        padding: 2rem 0;
+        margin-left: 4rem;
       }
-
+    }
+    > article {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      margin: 2rem 0;
+      > .content-container {
+        width:56%;
+        display: flex;
+        flex-direction: column;
+       > h4 {
+           font: 100 2rem "Roboto";
+           text-transform: uppercase;
+           text-align: center;
+           padding: 2rem 0;
+         }
       > p {
         letter-spacing: 3px;
         word-spacing: 3px;
@@ -54,7 +63,7 @@
         }
       }
     }
-
+    }
     > div {
       background-color: $dark;
       padding: 2rem;
@@ -93,21 +102,19 @@
 
 @media screen and (max-width: 600px) {
   .about > main {
-    > h1 {
-      font: 100 3rem "Roboto";
+    > .about-container >h1 {
+      font: 400 2rem "Roboto";
+      margin: 0;
       text-align: center;
     }
 
-    > article > p {
+    > article > .content-container {
       width: 100%;
-    }
-
-    > div > article {
-      flex-direction: column;
 
       > p {
-        text-align: center;
+        width: 100%;
       }
     }
   }
-}
+  }
+

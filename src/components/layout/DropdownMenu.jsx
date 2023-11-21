@@ -1,51 +1,47 @@
-import React, { useEffect, useState } from "react";
-import { Link } from "react-router-dom";
+import React, { useEffect, useState } from 'react';
+import { Link } from 'react-router-dom';
 
-function DropdownMenu() {
+const DropdownMenu = () => {
   const [navLinks, setNavLinks] = useState([]);
 
   useEffect(() => {
     const navs = [
-      { name: "Login", path: "/login" },
-      {name:"Orders", path:"/myorders"},
-      {name:"Logout", path:"/login"}
-      
+      { id: 1, name: 'Login', path: '/login' },
+      { id: 2, name: 'Orders', path: '/myorders' },
+      { id: 3, name: 'Logout', path: '/login' },
     ];
     setNavLinks(navs);
   }, []);
 
   return (
     <div>
-        <div className="container">
-          <a className="navbar-brand" href="/#">
-          
-          </a>
-          <div class="btn-group">
-            <button
-              id="primary"
-              type="button"
-              class="btn btn-primary dropdown-toggle"
-              data-bs-toggle="dropdown"
-              data-bs-display="static"
-              aria-expanded="false"
-            >
-              Menu
-            </button>
-            <ul class="dropdown-menu dropdown-menu-end">
-              {navLinks.map((d, i) => (
-                <li key={i}>
-                  <Link to={d.path}>
-                    <button class="dropdown-item" type="button">
-                      {d.name}
-                    </button>
-                  </Link>
-                </li>
-              ))}
-            </ul>
-          </div>
+      <div className="container">
+        <div className="btn-group">
+          <button
+            type="button"
+            id="myBtn"
+            className="btn dropdown-toggle"
+            data-bs-toggle="dropdown"
+            data-bs-display="static"
+            aria-expanded="false"
+          >
+            Menu
+          </button>
+          <ul className="dropdown-menu dropdown-menu-end">
+            {navLinks.map((d) => (
+              <li key={d.id}>
+                <Link to={d.path}>
+                  <button className="dropdown-item" type="button">
+                    {d.name}
+                  </button>
+                </Link>
+              </li>
+            ))}
+          </ul>
         </div>
+      </div>
     </div>
   );
-}
+};
 
 export default DropdownMenu;
