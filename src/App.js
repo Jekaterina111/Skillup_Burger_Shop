@@ -3,12 +3,12 @@ import Home from './components/home/Home';
 import Footer from './components/layout/Footer';
 import Header from './components/layout/Header';
 import Contact from './components/contact/Contact';
+import Login from './components/login/Login';
 
 // Add module imports for CART
 
 // Add module imports for Shipping
 
-import Login from './components/login/Login';
 import Profile from './components/profile/Profile';
 // Add module imports for MY ORDERS
 
@@ -18,6 +18,7 @@ import './styles/app.scss';
 import './styles/header.scss';
 import './styles/home.scss';
 import './styles/founder.scss';
+import './styles/dropdownMenu.scss';
 import './styles/menu.scss';
 import './styles/footer.scss';
 import './styles/contact.scss';

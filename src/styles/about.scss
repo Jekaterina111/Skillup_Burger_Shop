@@ -2,6 +2,7 @@
 
 .about {
   width: 100%;
+  min-height: 100vh;
   background-color: $pink;
   margin: 0;
   padding: 0;
@@ -17,7 +18,7 @@
         color: $red;
         padding: 1rem 2rem;
         text-transform: uppercase;
-        margin-left: 4rem;
+        margin-left: 6rem;
       }
     }
     > article {
@@ -63,43 +64,9 @@
         }
       }
     }
-    }
-    > div {
-      background-color: $dark;
-      padding: 2rem;
-      color: white;
-      > h2 {
-        text-align: center;
-        text-transform: uppercase;
-      }
-
-      > article {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-
-        > div {
-          margin: 2rem;
-          > img {
-            width: 150px;
-            height: 150px;
-            border-radius: 100%;
-          }
-          > h3 {
-            margin: 1rem;
-          }
-        }
-        > p {
-          margin: 0 1rem;
-          width: 50%;
-          letter-spacing: 2px;
-          line-height: 150%;
-        }
-      }
-    }
   }
 }
-
+}
 @media screen and (max-width: 600px) {
   .about > main {
     > .about-container >h1 {

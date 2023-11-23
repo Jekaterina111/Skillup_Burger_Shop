@@ -9,14 +9,19 @@ const Founder = () => {
         initial={{ x: '-100%', opacity: 0 }}
         whileInView={{ x: 0, opacity: 1 }}
       >
-        <img src={me} alt="Founder" height={200} width={200} />
-        <h3>Nelson</h3>
-        <p>
-          Hey, Everyone I am Nelson, the founder of Burger Shop.
-        </p>
-        <p>
-          Our aim is to create the most tasty burger on planet.
-        </p>
+        <div className="img-container">
+          <img src={me} alt="Founder" />
+          <h3>Nelson</h3>
+        </div>
+        <div className="content">
+          <h1 className="title">Founder</h1>
+          <p>
+            Hey, Everyone I am Nelson, the founder of Burger Shop.
+          </p>
+          <p>
+            Our aim is to create the most tasty burger on planet.
+          </p>
+        </div>
       </motion.div>
     </section>
   );
