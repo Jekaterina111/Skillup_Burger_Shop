@@ -1,0 +1,25 @@
+.login-form {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 10px;
+    
+    h2 {
+      grid-column: 1 / -1;
+    }
+    
+    button {
+      grid-column: span 2;
+    }
+    
+    form > *:nth-child(n+5):nth-child(-n+8) {
+      grid-column: span 1;
+    }
+    
+    input {
+      grid-column: span 2;
+    }
+    
+    label[for="checkbox"], p:nth-last-child(2) {
+      grid-column: span 2;
+    }
+  }
