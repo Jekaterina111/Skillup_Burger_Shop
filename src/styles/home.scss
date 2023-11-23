@@ -44,7 +44,6 @@
     object-fit: cover;
     position: absolute;
     padding: 1rem;
-    left: 0%;
     z-index: -1;
   }
 }
@@ -53,9 +52,16 @@
 
 @media screen and (max-width: 600px) {
   .home {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+   
     > div {
       display: flex;
       flex-direction: column;
+      align-items: center;
+      justify-content: center;
       padding: 1rem;
       > h1 {
         font-size: 2rem;
@@ -66,4 +72,5 @@
       }
     } 
   }
-} 
+  }
+ 

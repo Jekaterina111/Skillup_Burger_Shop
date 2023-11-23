@@ -1,5 +1,15 @@
 @import "colors";
 
+#myBtn {
+  width: 10rem;
+  font-size: 1rem;
+  border-radius: 10px;
+  background-color: $red;
+  color: white;
+  &:hover {
+    background-color: $reddark;
+  }
+}
 .dropdown {
   position: relative;
   display: inline-block;
@@ -41,11 +51,11 @@
   background-color: #f5f5f5;
 }
 
-#myBtn {
-  width: 10rem;
-  background-color: $red;
-  color: white;
-  &:hover {
-    background-color: $reddark;
+
+@media screen and (max-width: 600px) {
+  #myBtn{
+    width: 5rem;
+    font-size: 0.8rem;
   }
+
 }

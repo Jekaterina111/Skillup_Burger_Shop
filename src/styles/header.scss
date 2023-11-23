@@ -17,13 +17,14 @@ nav {
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.229);
   background-color: white;
 
-  > div {
+  > .nav-links {
     display: flex;
     align-items: center;
 
     > a {
       margin: 0 2rem;
       color: $dark;
+      font-weight: 500;
       transition: color 0.3s;
 
       &:hover {
@@ -33,11 +34,36 @@ nav {
   }
 }
 
+.hamburger-menu {
+  display: none;
+  cursor: pointer;
+}
+
 @media screen and (max-width: 600px) {
   nav {
     padding: 1rem;
-    > div > a {
-      margin: 0 0.5rem;
-    }
-  }
+    .nav-links {
+      display: none;
+      position: absolute;
+      top: 5rem;
+      left: 0;
+      z-index: 1;
+      min-width: 10rem;
+      background-color: white;
+      box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+      padding: 1rem;
+
+      &.active {
+       display: flex;
+       flex-direction: column;
+     } 
+     a {
+      margin: 10px 0;
+     }
+   }
+ }
+.hamburger-menu {
+   display: block;
+   position: relative;
+ }
 }
