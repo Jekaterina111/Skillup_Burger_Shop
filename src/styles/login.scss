@@ -1,25 +1,116 @@
+@import "colors";
+
 .login-form {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    grid-gap: 10px;
-    
-    h2 {
-      grid-column: 1 / -1;
-    }
-    
-    button {
-      grid-column: span 2;
-    }
-    
-    form > *:nth-child(n+5):nth-child(-n+8) {
-      grid-column: span 1;
-    }
-    
-    input {
-      grid-column: span 2;
-    }
-    
-    label[for="checkbox"], p:nth-last-child(2) {
-      grid-column: span 2;
+  width: 60%;
+  min-height: 70vh;
+  color: $gray;
+  display: grid;
+  grid-template-columns: repeat(8, 10%);
+  grid-template-rows: repeat(9, 3rem);
+  grid-gap: 1rem;
+  margin: 0 auto;
+  font-family: "Roboto", sans-serif;
+  margin-top: 5rem;
+  margin-bottom: 5rem;
+
+  .logIn-btn {
+    grid-column: span 4;
+    border-radius: 0.25rem;
+    border: none;
+    font-size: 1rem;
+    font-weight: 500;
+    color: $gray;
+    text-transform: uppercase;
+    cursor: pointer;
+  }
+
+  .text-row {
+    grid-column: span 8;
+    text-align: center;
+    font-weight: 400;
+    font-size: 1.5rem;
+    padding: 0.5rem;
+    color: $dark;
+  }
+
+  .icon-rows {
+    grid-column: span 8;
+    text-align: center;
+    color: $blue;
+
+    .icon-btn {
+      border: none;
+      background-color: #fff;
+      color: $blue;
+      border-radius: 50%;
+      text-align: center;
+      margin-right: 2rem;
+      width: 2rem;
+      height: 2rem;
+      cursor: pointer;
+      &:hover {
+        background-color: $liteGray;
+        transition:0.1s all ease;
+      }
     }
   }
+
+  label[for="email"],
+  label[for="password"] {
+    color:#fff;
+    grid-column: span 8;
+  }
+
+  #email,
+  #password {
+    grid-column: span 8;
+    width: 100%;
+    padding: 0.5rem;
+    border: 0.10rem solid $liteGray;
+    border-radius: 0.25rem;
+  }
+
+  .check-Form {
+    grid-column: span 4;
+    margin-left: 1rem;
+    cursor: pointer;
+     > label[for="checkbox"]{
+      padding-left: 1rem;
+    
+    > #checkbox{
+      border: none;
+      padding: 1rem;
+    }
+  }
+}
+  .remember-psw {
+   grid-column: span 4;
+   text-align: end;
+   margin-right: 0.5rem;
+   color: $blue;
+  }
+
+  .singIn-btn {
+    grid-column: span 8;
+    border: none;
+    background-image: linear-gradient(90deg, $secondBlue 1%, $blue 100%);
+    box-shadow:  0 4px 18px 0 hsla(219, 63%, 49%, 0.4);
+    border-radius: 0.25rem;
+    font-size: 1.2rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    color: white;
+    
+    cursor: pointer;
+  }
+
+  .form-footer {
+    grid-column: span 8;
+    text-align: center;
+
+    > span {
+      color: $blue;
+      margin-left: 0.25rem;
+    }
+  }
+}

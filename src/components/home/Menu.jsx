@@ -6,7 +6,7 @@ import burgWithFries from '../../assets/burger3.png';
 
 const Menu = (addToCard) => {
   return (
-    <section>
+    <section className="menu">
       <h1>Meniu</h1>
       <div id="menu">
         <MenuCard
