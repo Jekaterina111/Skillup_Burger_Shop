@@ -1,37 +1,40 @@
 {
     "env": {
-        "browser": true,
-        "es2021": true
+      "browser": true,
+      "es2021": true
     },
     "extends": [
-        "plugin:react/recommended",
-        "plugin:react-hooks/recommended",
-        "airbnb"
+      "plugin:react/recommended",
+      "plugin:react-hooks/recommended",
+      "airbnb"
     ],
-    "overrides": [
-    ],
+    "overrides": [],
     "parserOptions": {
-        "ecmaFeatures":
-         "jsx : true",
-        "ecmaVersion": "latest",
-        "sourceType": "module"
+      "ecmaFeatures": {
+        "jsx": true
+      },
+      "ecmaVersion": "latest",
+      "sourceType": "module"
     },
-    "plugins": [
-        "react"
-    ],
+    "plugins": ["react"],
     "rules": {
-    "import/extensions": 0,
-    "import/no-unresolved": 0,
-    "arrow-body-style": "off",
-    "react/prop-types": 0,
-    "no-underscore-dangle": [2, { "allow": ["__filename", "__dirname"] }],
-    "react/function-component-definition": [2, { "namedComponents": "arrow-function" }],
-    "react/react-in-jsx-scope": 0,
-    "react/jsx-filename-extension": [1, { "extensions": [".js", ".jsx"] }],
-    "jsx-a11y/label-has-associated-control": [ 2, { "labelComponents": ["CustomInputLabel"],
-        "labelAttributes": ["label"],
-        "controlComponents": ["CustomInput"],
-        "depth": 3
-      }]
- }
-}
+      "no-console": 0,
+      "import/extensions": 0,
+      "import/no-unresolved": 0,
+      "arrow-body-style": "off",
+      "react/prop-types": 0,
+      "no-underscore-dangle": [2, { "allow": ["__filename", "__dirname"] }],
+      "react/function-component-definition": [2, { "namedComponents": "arrow-function" }],
+      "react/react-in-jsx-scope": 0,
+      "react/jsx-filename-extension": [1, { "extensions": [".js", ".jsx"] }],
+      "jsx-a11y/label-has-associated-control": [
+        2,
+        {
+          "labelComponents": ["CustomInputLabel"],
+          "labelAttributes": ["label"],
+          "controlComponents": ["CustomInput"],
+          "depth": 3
+        }
+      ]
+    }
+  }
