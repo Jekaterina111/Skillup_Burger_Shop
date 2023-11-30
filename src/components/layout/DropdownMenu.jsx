@@ -14,31 +14,29 @@ const DropdownMenu = () => {
   }, []);
 
   return (
-    <div>
-      <div className="container">
-        <div className="btn-group">
-          <button
-            type="button"
-            id="myBtn"
-            className="btn dropdown-toggle"
-            data-bs-toggle="dropdown"
-            data-bs-display="static"
-            aria-expanded="false"
-          >
-            Menu
-          </button>
-          <ul className="dropdown-menu dropdown-menu-end">
-            {navLinks.map((d) => (
-              <li key={d.id}>
-                <Link to={d.path}>
-                  <button className="dropdown-item" type="button">
-                    {d.name}
-                  </button>
-                </Link>
-              </li>
-            ))}
-          </ul>
-        </div>
+    <div className="container">
+      <div className="btn-group" id="my-btn-group">
+        <button
+          type="button"
+          id="myBtn"
+          className="btn dropdown-toggle"
+          data-bs-toggle="dropdown"
+          data-bs-display="static"
+          aria-expanded="false"
+        >
+          Menu
+        </button>
+        <ul className="dropdown-menu dropdown-menu-end">
+          {navLinks.map((d) => (
+            <li key={d.id}>
+              <Link to={d.path}>
+                <button className="dropdown-item" type="button">
+                  {d.name}
+                </button>
+              </Link>
+            </li>
+          ))}
+        </ul>
       </div>
     </div>
   );

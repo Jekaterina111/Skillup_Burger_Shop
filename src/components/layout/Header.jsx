@@ -4,6 +4,7 @@ import { GiShoppingCart } from 'react-icons/gi';
 import { TfiMenu } from 'react-icons/tfi';
 import { IoFastFoodSharp } from 'react-icons/io5';
 import DropdownMenu from './DropdownMenu';
+import '../../styles/header.scss';
 
 const Header = () => {
   const [menuOpen, setMenuOpen] = useState(false);

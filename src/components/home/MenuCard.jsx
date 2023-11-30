@@ -1,10 +1,17 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import Popup from 'reactjs-popup';
 
 const MenuCard = ({
-  itemNum, burgerSrc, price, title, handler, delay = 0.2,
+  itemNum, burgerSrc, price, title, delay = 0.2,
 }) => {
+  const [showPopup, setShowPopup] = useState(false);
+
+  const handler = (event) => {
+    event.preventDefault();
+    setShowPopup(true);
+  };
+
   return (
     <motion.div
       className="menuCard"
@@ -28,11 +35,14 @@ const MenuCard = ({
           {price}
         </h5>
         <p>{title}</p>
-        <Popup trigger={(
-          <button type="submit" onClick={() => handler(itemNum)}>
-            Buy Now
-          </button>
-         )}
+        <Popup
+          open={showPopup}
+          onClose={() => setShowPopup(false)}
+          trigger={(
+            <button type="submit" onClick={() => handler(itemNum)}>
+              Buy Now
+            </button>
+        )}
         >
           <div style={{
             color: 'red',

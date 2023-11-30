@@ -1,10 +1,16 @@
 @import "colors";
 
+#my-btn-group {
+  outline: none;
+  box-shadow: none;
+}
+
 #myBtn {
   width: 10rem;
   font-size: 1rem;
   border-radius: 10px;
   background-color: $red;
+  border: none;
   color: white;
   &:hover {
     background-color: $reddark;
@@ -16,16 +22,15 @@
 }
 
 .dropdown-toggle {
-  background-color: #fff;
   border: none;
   color: #333;
-  padding: 10px;
+  padding: 1rem;
   font-size: 16px;
   cursor: pointer;
 }
 
 .dropdown-toggle:hover {
-  background-color: #f5f5f5;
+  background-color: white;
 }
 
 .dropdown-menu {
@@ -34,7 +39,7 @@
   left: 0;
   z-index: 1;
   min-width: 120px;
-  background-color: #fff;
+  background-color: white;
   box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
   padding: 10px 0;
 }
@@ -51,11 +56,10 @@
   background-color: #f5f5f5;
 }
 
-
 @media screen and (max-width: 600px) {
   #myBtn{
     width: 5rem;
     font-size: 0.8rem;
+    margin: 1.5rem;
   }
-
 }
