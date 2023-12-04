@@ -6,9 +6,9 @@ import Contact from './components/contact/Contact';
 import Login from './components/login/Login';
 import Cart from './components/cart/Cart';
 import Shipping from './components/cart/Shipping';
-
+import OrderDetails from './components/myOrders/OrderDetails';
 import Profile from './components/profile/Profile';
-// Add module imports for MY ORDERS
+import MyOrders from './components/myOrders/MyOrders';
 
 import About from './components/about/About';
 import './styles/app.scss';
@@ -19,7 +19,6 @@ import './styles/menu.scss';
 import './styles/footer.scss';
 import './styles/profile.scss';
 import './styles/table.scss';
-import './styles/orderDetails.scss';
 import './styles/about.scss';
 
 const App = () => {
@@ -34,6 +33,8 @@ const App = () => {
         <Route path="/me" element={<Profile />} />
         <Route path="/cart" element={<Cart />} />
         <Route path="/shipping" element={<Shipping />} />
+        <Route path="/myOrders" element={<MyOrders />} />
+        <Route path="/order/:id" element={<OrderDetails />} />
       </Routes>
       <Footer />
     </Router>

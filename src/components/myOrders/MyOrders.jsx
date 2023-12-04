@@ -1,6 +1,6 @@
-import React from "react";
-import { Link } from "react-router-dom";
-import { AiOutlineEye } from "react-icons/ai";
+import React from 'react';
+import { Link } from 'react-router-dom';
+import { AiOutlineEye } from 'react-icons/ai';
 
 const MyOrders = () => {
   const arr = [1, 2, 3, 4];
@@ -21,21 +21,23 @@ const MyOrders = () => {
           </thead>
 
           <tbody>
-            {arr.mao((i) => (
+            {arr.map((i) => (
               <tr key={i}>
                 <td>#sdkfsdfdsf</td>
                 <td>Processing</td>
                 <td>23</td>
-                <td>₹{2132}</td>
+                <td>
+                  ₹
+                  {2132}
+                </td>
                 <td>COD</td>
                 <td>
                   <Link to="/order/:id">
-                    <AiOutlineEye />
+                    <AiOutlineEye type="button" aria-label="Save" />
                   </Link>
                 </td>
               </tr>
             ))}
-           
           </tbody>
         </table>
       </main>

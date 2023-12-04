@@ -7,6 +7,8 @@
   background-repeat: no-repeat;
   background-size: cover;
   display: flex;
+  align-items: center;
+  justify-items: center;
   padding: 1rem 0rem 0rem 1.5rem;
   overflow-x: hidden;
 
@@ -17,7 +19,7 @@
     background-color: white;
     border: solid white;
     padding: 2rem;
-    width: 65%;
+    width: 70%;
     height: 99%;
     justify-content: center;
     > h2 {
@@ -56,21 +58,22 @@
    
   
   .formBorder {
-    width: 28%;
+    width: 20%;
     height: 99%;
     background-color: white;
     border: solid white;
     border-radius: 0 200px 200px 0;
     position: relative;
     > div {
-      width: 10rem;
-      height: 10rem;
+      width: 60%;
+      height: 60%;
       position: absolute;
-      top: 50%;
-      transform: translate(160%, -50%);
+      top: 65%;
+      transform: translate(110%, -50%);
       filter: drop-shadow(0 0 10px rgba(0, 0, 0, 0.566));
       > img {
         width: 100%;
+        object-fit: cover;
       }
     }
   }

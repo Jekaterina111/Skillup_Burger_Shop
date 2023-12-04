@@ -53,7 +53,7 @@ const Shipping = () => {
           <div className="button-container">
             <Popup
               trigger={
-                <Link to="/shipping">Confirm Order</Link>
+                <Link to="/myOrders">Confirm Order</Link>
               }
               position="right center"
             >
