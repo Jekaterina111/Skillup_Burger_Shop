@@ -1,5 +1,6 @@
 import React from 'react';
 import { Country, State } from 'country-state-city';
+import { Link } from 'react-router-dom';
 import Popup from 'reactjs-popup';
 import '../../styles/shipping.scss';
 
@@ -9,15 +10,15 @@ const Shipping = () => {
       <main>
         <h1>Shipping Details</h1>
         <form>
-          <div>
+          <div className="input-container">
             <label htmlFor="house">H.No.</label>
             <input id="house" type="text" placeholder="Enter House No." />
           </div>
-          <div>
+          <div className="input-container">
             <label htmlFor="city">City</label>
             <input id="city" type="text" placeholder="Enter City" />
           </div>
-          <div>
+          <div className="input-container">
             <label htmlFor="country">Country</label>
             <select>
               <option id="country" value="">Country</option>
@@ -29,7 +30,7 @@ const Shipping = () => {
                ))}
             </select>
           </div>
-          <div>
+          <div className="input-container">
             <label htmlFor="state">State</label>
             <select>
               <option id="state" value="">State</option>
@@ -41,36 +42,39 @@ const Shipping = () => {
                ))}
             </select>
           </div>
-          <div>
+          <div className="input-container">
             <label htmlFor="pincode">Pin Code</label>
             <input id="pincode" type="number" placeholder="Enter Pincode" />
           </div>
-          <div>
+          <div className="input-container">
             <label htmlFor="telNumber">Contact</label>
             <input id="telNumber" type="number" placeholder="Enter Tel Number" />
           </div>
-
-          <Popup
-            trigger={
-              <button type="button">Confirm Order</button>
-            }
-            position="right center"
-          >
-            <div style={{
-              color: 'red',
-              position: 'absolute',
-              top: '50%',
-              right: '100%',
-              transform: 'translateY(-50%)',
-              backgroundColor: '#fff',
-              padding: '10px',
-              borderRadius: '5px',
-              boxShadow: '0 0 10px rgba(0, 0, 0, 0.2)',
-            }}
+          <div className="button-container">
+            <Popup
+              trigger={
+                <Link to="/shipping">Confirm Order</Link>
+              }
+              position="right center"
             >
-              Order Placed
-            </div>
-          </Popup>
+              <div style={{
+                color: 'red',
+                position: 'absolute',
+                top: '50%',
+                right: '100%',
+                width: '10rem',
+                textAlign: 'center',
+                transform: 'translateY(-50%)',
+                backgroundColor: '#fff',
+                padding: '1rem',
+                borderRadius: '5px',
+                boxShadow: '0 0 10px rgba(0, 0, 0, 0.2)',
+              }}
+              >
+                Order Placed
+              </div>
+            </Popup>
+          </div>
         </form>
       </main>
     </section>

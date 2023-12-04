@@ -6,7 +6,7 @@ import burger3 from '../../assets/burger3.png';
 import '../../styles/cart.scss';
 
 const CartItem = ({
-  value, title, img, increment, decrement,
+  value = 0, title, img, increment, decrement,
 }) => {
   return (
     <div className="cartItem">

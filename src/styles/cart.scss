@@ -33,6 +33,10 @@
         text-align: center;
         margin-top: 2rem;
         float: right;
+        cursor: pointer;
+        &:hover {
+          background-color: $reddark;
+        }
       }
     }
   }
@@ -107,4 +111,5 @@
 }
   h4 {
     font-size: 0.7rem;
+    white-space: inherit;
   }
